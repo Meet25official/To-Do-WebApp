@@ -1,5 +1,7 @@
+// src/components/StickyModal/StickyModal.jsx
 import React, { useEffect, useState } from "react";
 import "./stickyModal.scss";
+
 const StickyModal = ({ open, initialData, onSubmit, onClose }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -15,13 +17,17 @@ const StickyModal = ({ open, initialData, onSubmit, onClose }) => {
       setContent("");
       setColor("#ffeb3b");
     }
-  }, [initialData, open]);
+  }, [initialData, open]); // Re-run when initialData or open changes
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!title.trim() || !content.trim()) return;
+    if (!title.trim() || !content.trim()) {
+      alert("Title and Content cannot be empty.");
+      return;
+    }
     onSubmit({ title: title.trim(), content: content.trim(), color });
   };
+
   if (!open) return null;
 
   return (
@@ -56,9 +62,8 @@ const StickyModal = ({ open, initialData, onSubmit, onClose }) => {
             onChange={(e) => setColor(e.target.value)}
           />
 
-          <button type="submit">{initialData ? "Save": "Add"}</button>
+          <button type="submit">{initialData ? "Save" : "Add"}</button>
           <button type="button" className="cancelBtn" onClick={onClose}>
-            {" "}
             Cancel
           </button>
         </form>

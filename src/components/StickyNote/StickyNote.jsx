@@ -1,3 +1,4 @@
+// src/components/StickyNote/StickyNote.jsx
 import React from 'react'
 import "./stickyNote.scss"
 import { Delete, Edit } from '@mui/icons-material';
