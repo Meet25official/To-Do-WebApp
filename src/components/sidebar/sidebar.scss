@@ -1,0 +1,172 @@
+.sidebar{
+    flex: 1;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    color: #333;
+    padding: 10px 5px;
+
+    .top{
+        height: 70px;
+        padding: 10px;
+
+        .menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+
+            .menu-title {
+                font-size: 24px;
+                font-weight: bold;
+                color: #444;
+            }
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 6px;
+            background-color: #f4f4f4;
+
+            input{
+                border: none;
+                outline: none;
+                background-color: transparent;
+                color: #333;
+
+                &::placeholder{
+                    font-size: 14px;
+                    color: #777;
+                }
+            }
+        }
+    }
+
+    .center{
+        padding-left: 10px;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .title{
+                font-size: 14px;
+                font-weight: bold;
+                color: #666;
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+
+            li{
+                display: flex;
+                align-items: center;
+                padding: 8px;
+                cursor: pointer;
+                border-radius: 5px;
+                position: relative;
+                transition: background 0.3s ease;
+
+                .counter{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20px;
+                    height: 15px;
+                    border-radius: 5px;
+                    background-color: rgb(230, 226, 226);
+                    color: #333;
+                    font-size: 10px;
+                    font-weight: bold;
+                    margin-left: auto;
+                }
+
+                &:hover{
+                    background-color: #e0e0e0;
+                }
+
+                .icon{
+                    font-size: 26px;
+                    color: #555;
+                }
+
+                .color{
+                    height: 18px;
+                    width: 18px;
+                    border-radius: 3px;
+                    border: none;
+                    // background-color: red;
+                }
+
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #444;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .title{
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .tags{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 5px;
+
+            .tag{
+                position: relative;
+                background-color: #f3f3f3;
+                color: #333;
+                padding: 6px 12px;
+                border-radius: 5px;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+        }
+    }
+
+    .bottom{
+        padding-left: 10px;
+
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li{
+                display: flex;
+                align-items: center;
+                padding: 8px;
+                cursor: pointer;
+                border-radius: 5px;
+                position: relative;
+                transition: background 0.3s ease;
+
+                &:hover{
+                    background-color: #e0e0e0;
+                }
+
+                .icon{
+                    font-size: 24px;
+                    color: #555;
+                }
+
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #444;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
